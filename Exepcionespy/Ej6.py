@@ -8,11 +8,11 @@ try:
                  "(dni, nombre)"
                  "VALUES (%s, %s)")
 
-    data_medico = (33457892, 'Ricchiardo Rinoldi')
+    data_medico = (33457892, 'Ricardo Moroni')
 
     cursor.execute(add_medico, data_medico)
     cnx.commit()
 except mysql.connector.errors.IntegrityError:
-    print("whoops! hubo un problema inesperado!")
+    print("hubo un problema al insertar el medico")
 cursor.close()
 cnx.close()
